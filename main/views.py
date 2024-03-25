@@ -5,9 +5,14 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title': 'Home',
-        'content': 'Главная страница магазина',
+        'content': 'Магазин мебели HOME',
     }
     return render(request, 'main/index.html', context=context)
 
 def view_about(request):
-    return HttpResponse('About')
+    context = {
+        'title': 'HOME - О нас',
+        'content': 'О нас',
+        'text_on_page': 'Это очень хороший магазин!',
+    }
+    return render(request, 'main/about.html', context=context)
