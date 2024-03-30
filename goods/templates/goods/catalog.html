@@ -75,7 +75,7 @@
                                     
                                 
                                 <div class="card-body">
-                                    <a href="#">
+                                    <a href="{% url 'catalog:product' item.slug %}">
                                         <p class="card-title">{{ item.name }}</p>
                                     </a>
                                     <p class="card-text text-truncate">{{ item.description }}</p>
